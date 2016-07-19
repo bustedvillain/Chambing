@@ -3,9 +3,10 @@
         <div class="swiper-container" data-autoplay="0" data-loop="1" data-speed="500" data-center="0" data-slides-per-view="responsive" data-xs-slides="4" data-sm-slides="8" data-md-slides="14" data-lg-slides="19" data-add-slides="19">
             <div class="swiper-wrapper">
                 <div class="swiper-slide active" data-val="0">
-
-                    <a href="gallery.html">				<img class="img-responsive img-full" src="img/f1.jpg" alt="">
-                    </a></div>
+                    <a href="gallery.html">				
+                        <img class="img-responsive img-full" src="img/f1.jpg" alt="">
+                    </a>
+                </div>
                 <div class="swiper-slide" data-val="1">
                     <a href="gallery.html">
 
@@ -130,8 +131,8 @@
             <div class="row">	
                 <div class="col-md-3 col-xl-4">
                     <div class="footer-block">
-                        <h1 class="footer-title">About Us</h1>
-                        <p>Vestibulum tincidunt, augue fermentum accumsan viverra, eros dui rutrum libero, nec imperdiet felis sem in augue luctus <a href="blog-detail-2.html">diam a porta</a> iaculis. Vivamus sit amet fermentum nisl. Duis id <a href="blog-detail-2.html">massa id purus</a> tristique varius a sit amet est. Fusce dolor libero, efficitur et lobortis at, faucibus nec nunc.</p>
+<!--                        <h1 class="footer-title">Acerca De</h1>
+                        <p>EL CHAMBING TRUEQUE ART&Iacute;STICO es una plataforma interactiva que busca crear un circuito de conexiones laborales y profesionales a trav&ecute;s de una comunidad virtual en donde se publiquen trabajos art&iacute;sticos remunerados. Porque queremos unirnos como comunidad actoral para ampliar e impulsar la bolsa de trabajo, expandir y diversificar las oportunidades laborales</p>-->
                         <ul class="soc_buttons">
                             <li><a href=""><i class="fa fa-facebook"></i></a></li>
                             <li><a href=""><i class="fa fa-twitter"></i></a></li>
@@ -142,7 +143,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3 col-xl-2">
+<!--                <div class="col-md-3 col-xl-2">
                     <div class="footer-block">
                         <h1 class="footer-title">Some Links</h1>
                         <div class="row footer-list-footer">
@@ -165,8 +166,8 @@
                             </div>
                         </div>
                     </div>
-                </div>				
-                <div class="col-md-3 galerry">
+                </div>				-->
+<!--                <div class="col-md-3 galerry">
                     <div class="footer-block">					
                         <h1 class="footer-title">Recent Works</h1>
                         <a href="blog-detail-2.html"><img src="img/g1.jpg" alt=""></a>
@@ -182,8 +183,8 @@
                         <a href="blog-detail-2.html"><img src="img/g11.jpg" alt=""></a>
                         <a href="blog-detail-2.html"><img src="img/g12.jpg" alt=""></a>
                     </div>
-                </div>
-                <div class="col-md-3">
+                </div>-->
+<!--                <div class="col-md-3">
                     <div class="footer-block">
                         <h1 class="footer-title">Subscribe On Our News</h1>
                         <form action="./" class="subscribe-form">
@@ -203,7 +204,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -211,13 +212,13 @@
         <div class="container-fluid custom-container">
             <div class="col-md-12 footer-end clearfix">
                 <div class="left">
-                    <span class="copy">© 2015. All rights reserved. <span class="white"><a href="blog-detail-2.html"> NRGNetwork</a></span></span>
-                    <span class="created">Created with LOVE by <span class="white"><a href="blog-detail-2.html"> NRGThemes</a></span></span>
+                    <span class="copy">© 2016. All rights reserved. <span class="white"><a href="http://chambing.mx "> Chambing.mx</a></span></span>
+                    <span class="created">Created with LOVE by <span class="white"><a href="#"> BustedVillain Co.</a></span></span>
                 </div>
                 <div class="right">
-                    <a class="btn color-7 size-2 hover-9">About Us</a>
-                    <a class="btn color-7 size-2 hover-9">Help</a>
-                    <a class="btn color-7 size-2 hover-9">Privacy Policy</a>
+                    <a class="btn color-7 size-2 hover-9" href="index.php">Acerca De</a>
+                    <a class="btn color-7 size-2 hover-9">Ayuda</a>
+                    <a class="btn color-7 size-2 hover-9">Pol&iacute;tica de Privacidad</a>
                 </div>
             </div>			
         </div>

@@ -2,7 +2,7 @@
 #Host de la base de datos
 define("MYSQL_HOST","localhost");
 #Usuario de la base de datos
-define("MYSQL_USER","root");
+define("MYSQL_USER","chambing_user");
 #Password de la base de datos
 define("MYSQL_PASS","chambing_pwd");
 #Nombre de la base de datos

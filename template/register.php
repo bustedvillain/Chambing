@@ -8,48 +8,34 @@
                         <i class="fa fa-times close-button"></i>
                         <h5 class="large-popup-title">Registrarse</h5>
                     </div>
-                    <form action="./" class="popup-input-search">
+                    <form action="saveRegister.php" class="popup-input-search">
                         <div class="col-md-6">
-                            <input class="input-signtype" type="text" required="" placeholder="Nombre Art&iacute;stico">
+                            <input class="input-signtype" type="text" required="true" placeholder="Nombre Art&iacute;stico">
                         </div>
                         <div class="col-md-6">
-                            <input class="input-signtype" type="text" required="" placeholder="Nombre de Pila">
+                            <input class="input-signtype" type="text" required="true" placeholder="Nombre de Pila">
                         </div>
                         <div class="col-md-6">
-                            <input class="input-signtype" type="text" required="" placeholder="Apellidos">
+                            <input class="input-signtype" type="text" required="true" placeholder="Apellidos">
                         </div>
                         <div class="col-md-6">
-                            <input class="input-signtype" type="email" required="" placeholder="Email">
+                            <input class="input-signtype" type="email" required="true" placeholder="Email">
                         </div>                            
                         <div class="col-md-6">
                             <div class="be-custom-select-block">
-                                <select class="be-custom-select">
-                                    <option value="" disabled selected>
-                                        Nacionalidad
-                                    </option>
-                                    <option value="">Mexicano</option>
-                                    <option value="">Argentino</option>
-                                    <option value="">Paraguayo</option>
-                                </select>
+                                <?php nationalities(); ?>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="be-custom-select-block">
-                                <select class="be-custom-select">
-                                    <option value="" disabled selected>
-                                        Lugar de Residencia
-                                    </option>
-                                    <option value="">Distrito Federal</option>
-                                    <option value="">Estado de México</option>
-                                    <option value="">Sinaloa</option>
-                                </select>
+                                <?php residence(); ?>
                             </div>                           
                         </div>
                         
                         <div class="col-md-6">
                             <span class="large-popup-text">
                                 Fecha de Nacimiento
-                                <input class="input-signtype" type="date" required="" placeholder="Fecha de Nacimiento">
+                                <input id="reg_birthday" class="input-signtype" type="date" required="" placeholder="Fecha de Nacimiento">
                             </span>                            
                         </div>
                        <div class="col-md-6">

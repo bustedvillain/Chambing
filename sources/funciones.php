@@ -2,6 +2,24 @@
 
 session_start();
 include ("config.php");
+include ("funciones.registro.php");
+
+/**
+ * Verifica si hay conexion a la base de datos
+ * @return boolean
+ */
+checkDBIntegrity();
+function checkDBIntegrity() {
+    require_once 'Query.inc';
+    $query = new Query();
+    $check = @$query->select("NOW()", "DUAL", "1=1");
+
+    if (val($check)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 #Limpia los datos
 function __($var) {
@@ -78,11 +96,27 @@ function guardaArchivo($carpeta, $titulo) {
     return $ruta;
 }
 
-function redireccionar() {
+/**
+ * Funcion que inserta una funcion en JavaScript para redireccionar la pagina
+ */
+function redireccionar($path = "index.php") {
     echo "<script language='JavaScript' type='text/javascript'>";
     echo "function redireccionar(){";
-    echo "location.href='index.php';}";
+    echo "location.href='" . $path . "';}";
     echo "setTimeout ('redireccionar()', 1)";
     echo "</script>";
+}
+
+/**
+ * Valida un dato que no sea nulo
+ * @param type $dato
+ * @return boolean
+ */
+function val($dato) {
+    if ($dato && isset($dato) && $dato != null) {
+        return true;
+    } else {
+        return false;
+    }
 }
 ?>                           

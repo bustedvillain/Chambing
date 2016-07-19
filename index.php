@@ -1,3 +1,4 @@
+<?php include("sources/funciones.php"); ?>
 <!DOCTYPE html>
 <html>
     <?php include("template/headers.php"); ?>
@@ -17,22 +18,39 @@
                     <a class="be-register btn color-3 size-1 hover-6"><i class="fa fa-lock"></i>Registrarse</a>
                 </div>	
             </div>
-            <div class="container">
-                <div class="about-description">
-                    <div class="videoWrapper">
-                        <!-- Copy & Pasted from YouTube -->
-                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/IwqNx-GkmmA" frameborder="0" allowfullscreen></iframe>
-                    </div>
+            <div class="container">             
 
-                    <div class="row">
-                        <div class="col-xs-12 col-md-10 col-md-offset-1">
-                            <div class="about-text">EL CHAMBING TRUEQUE ARTISTICO es una plataforma interactiva que busca crear un circuito de conexiones laborales y profesionales a través de una comunidad virtual en donde se publiquen mensualmente trabajos artísticos remunerados. Porque queremos unirnos como comunidad actoral para ampliar e impulsar la bolsa de trabajo, expandir y diversificar las oportunidades laborales.</div>
+                <div class="row">
+                    <!--                    <div class="col-md-9">-->
+                    <div class="be-large-post">
+                        <div class="info-block">
+                        </div>
+                        <div class="blog-content popup-gallery be-large-post-align">
+                            <div class="blog-content popup-gallery be-large-post-align">
+                                <h5 class="be-post-title to">
+                                    Chambing
+                                </h5>
+
+                                <div class="videoWrapper">
+                                    <!-- Copy & Pasted from YouTube -->
+                                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/IwqNx-GkmmA" frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                                <div class="clear"></div>
+                                <br/>
+                                <div class="post-text">
+                                    <p>EL CHAMBING TRUEQUE ARTISTICO es una plataforma interactiva que busca crear un circuito de conexiones laborales y profesionales a través de una comunidad virtual en donde se publiquen mensualmente trabajos artísticos remunerados. Porque queremos unirnos como comunidad actoral para ampliar e impulsar la bolsa de trabajo, expandir y diversificar las oportunidades laborales.</p>
+                                </div>
+                            </div>	
+
+                            <!--</div>-->
                         </div>
                     </div>
-                </div>
-            </div>	
 
+                </div>
+            </div>
         </div>
+
 
         <!-- THE FOOTER -->
         <?php include("template/footer.php"); ?>
