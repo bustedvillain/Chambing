@@ -1,8 +1,10 @@
 <?php
 
 session_start();
-include ("config.php");
+require_once 'Query.php';
 include ("funciones.registro.php");
+include ("funciones.catalogos.php");
+include("Util.php");
 
 /**
  * Verifica si hay conexion a la base de datos
@@ -10,22 +12,15 @@ include ("funciones.registro.php");
  */
 checkDBIntegrity();
 function checkDBIntegrity() {
-    require_once 'Query.inc';
     $query = new Query();
-    $check = @$query->select("NOW()", "DUAL", "1=1");
+    $query->sql = "SELECT NOW() FROM DUAL";
+    $check = @$query->select();
 
-    if (val($check)) {
+    if (Util::val($check)) {
         return true;
     } else {
         return false;
     }
-}
-
-#Limpia los datos
-function __($var) {
-    $dato = htmlentities($var, ENT_QUOTES, 'UTF-8');
-    $dato = stripslashes($dato);
-    return trim($dato);
 }
 
 /**
@@ -107,16 +102,5 @@ function redireccionar($path = "index.php") {
     echo "</script>";
 }
 
-/**
- * Valida un dato que no sea nulo
- * @param type $dato
- * @return boolean
- */
-function val($dato) {
-    if ($dato && isset($dato) && $dato != null) {
-        return true;
-    } else {
-        return false;
-    }
-}
+
 ?>                           

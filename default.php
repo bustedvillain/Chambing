@@ -9,44 +9,10 @@
         <?php include("template/header-menu.php"); ?>
         <!-- MAIN CONTENT -->
         <div id="content-block">
-            <div class="head-bg">
-                <div class="head-bg-img"></div>
-                <div class="head-bg-content">
-                    <h1>CHAMBING.MX</h1>
-                    <p>TRUEQUE ART&Iacute;STICO</p>
-                    <!--<a class="btn color-1 size-1 hover-1" ><i class="fa fa-facebook"></i>sign up via facebook</a>-->
-                    <a class="be-register btn color-3 size-1 hover-6"><i class="fa fa-lock"></i>Registrarse</a>
-                </div>	
-            </div>
+            
             <div class="container">             
 
-                <div class="row">
-                    <!--                    <div class="col-md-9">-->
-                    <div class="be-large-post">
-                        <div class="info-block">
-                        </div>
-                        <div class="blog-content popup-gallery be-large-post-align">
-                            <div class="blog-content popup-gallery be-large-post-align">
-                                <h5 class="be-post-title to">
-                                    Chambing
-                                </h5>
-
-                                <div class="videoWrapper">
-                                    <!-- Copy & Pasted from YouTube -->
-                                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/IwqNx-GkmmA" frameborder="0" allowfullscreen></iframe>
-                                </div>
-
-                                <div class="clear"></div>
-                                <br/>
-                                <p>EL CHAMBING TRUEQUE ARTISTICO es una plataforma interactiva que busca crear un circuito de conexiones laborales y profesionales a través de una comunidad virtual en donde se publiquen mensualmente trabajos artísticos remunerados. Porque queremos unirnos como comunidad actoral para ampliar e impulsar la bolsa de trabajo, expandir y diversificar las oportunidades laborales.</p>
-
-                            </div>	
-
-                            <!--</div>-->
-                        </div>
-                    </div>
-
-                </div>
+               
             </div>
         </div>
 

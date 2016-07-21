@@ -10,7 +10,7 @@ define("MYSQL_NAME","chambing");
 #Mexican debugger
 define("RESULTTRACE",true);
 
-$extensionesPermitidasIMG = array("jpg", "jpeg", "gif", "png", "bmp", "JPG", "JPEG", "GIF", "PNG", "BMP");
+$extensionesPermitidasIMG = array("jpg", "jpeg", "gif", "png", "bmp", "JPG", "JPEG", "GIF", "PNG", "BMP", "DOC", "DOCX", "PDF");
 
 
 

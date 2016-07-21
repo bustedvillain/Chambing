@@ -2,7 +2,7 @@
     <div class="container-fluid custom-container">
         <div class="row no_row row-header">
             <div class="brand-be">
-                <a href="index.html">
+                <a href="index.php">
                     <img class="logo-c active be_logo"  src="img/logo_chambing_mini.png" alt="logo">
                     <img class="logo-c be_logo" src="img/logo-green.png" alt="logo2">
                     <img  class="logo-c be_logo" src="img/logo-orang.png" alt="logo3">
@@ -30,7 +30,7 @@
             <div class="login-header-block">
                 <div class="login_block">
                     <a class="btn-login btn color-1 size-2 hover-2" href="" ><i class="fa fa-user"></i>
-                        Registrarse</a>
+                        Iniciar Sesi&oacute;n</a>
                 </div>	
             </div>
         </div>

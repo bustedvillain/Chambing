@@ -1,52 +1,42 @@
 <?php
 
-/**
- * 
- * @author e-israel from TERACOM.mx
- * Copyrigth 2010
- *
- */
+//   Date             Modified by         Change(s)
+//   2013-09-24         HMP                 1.1
+
+require_once ("Config.php");
+require_once 'Error.inc';
+
 class Conexion {
 
-    protected $idConexion;
+    private $id = null;
 
     function __construct() {
-        $this->idConexion = mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS);
-        if ($this->idConexion) {
-            //if(RESULTTRACE) print("<p>Conexi&oacute;n exitosa a MySQL.</p>");
-            if (mysql_select_db(MYSQL_NAME, $this->idConexion)) {
-                //if(RESULTTRACE) print("<p>Ha sido seleccionada correctamente la base de datos: ".MYSQL_NAME."</p>");	
-                return $this->idConexion;
-            } else {
-                exit("<p>ERROR en MySQL</p>
-					<p>Error No:  " . mysql_errno() . "</p>
-					<p>ERROR:  " . mysql_error() . "</p>
-					<p>Archivo. " . __FILE__ . "</p>
-					<p>Linea: " . __LINE__ . "</p>
-					<p>Clase: " . __CLASS__ . "</p>
-					<p>Funcion: " . __FUNCTION__ . "</p>
-					<p>Metodo: " . __METHOD__ . "</p>
-					<p>Scrip PHP: " . $_SERVER['PHP_SELF'] . "</p>");
-            }
-        } else {
-            exit("<p>ERROR en MySQL</p>
-					<p>Error No:  " . mysql_errno() . "</p>
-					<p>ERROR:  " . mysql_error() . "</p>
-					<p>Archivo. " . __FILE__ . "</p>
-					<p>Linea: " . __LINE__ . "</p>
-					<p>Clase: " . __CLASS__ . "</p>
-					<p>Funcion: " . __FUNCTION__ . "</p>
-					<p>Metodo: " . __METHOD__ . "</p>
-					<p>Scrip PHP: " . $_SERVER['PHP_SELF'] . "</p>");
+        $this->id = mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS);
+        if (isset($this->id)) {
+            if (mysql_select_db(MYSQL_NAME, $this->id))
+                return $this->id;
+            else
+                (Error::error_mysql(mysql_errno() . ": " . mysql_error(), __FILE__, __LINE__, __CLASS__, __FUNCTION__, __METHOD__, $_SERVER['PHP_SELF'], "Error al Conectar a la Base de Datos"));
+        } else
+            (Error::error_mysql(mysql_errno() . ": " . mysql_error(), __FILE__, __LINE__, __CLASS__, __FUNCTION__, __METHOD__, $_SERVER['PHP_SELF'], "Error al Conectar a la Base de Datos"));
+    }
+
+    /**
+     * Destrucción del objeto Conexión
+     * @return type
+     */
+    function __destruct() {
+        if ($this->id) {
+            return @mysql_close($this->id);
         }
     }
 
-    function __destruct() {
-        if ($this->idConexion) {
-            @mysql_close($this->idConexion);
-            //if(RESULTTRACE) print("<p>Conexion a MySQL cerrada.</p>");
-            return true;
-        }
+    /**
+     * Obtner ID Conexión
+     * @return type
+     */
+    function getIdConexion() {
+        return $this->id;
     }
 
 }

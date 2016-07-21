@@ -8,9 +8,9 @@
                         <i class="fa fa-times close-button"></i>
                         <h5 class="large-popup-title">Registrarse</h5>
                     </div>
-                    <form action="saveRegister.php" class="popup-input-search">
+                    <form method="POST" action="saveRegister.php" class="popup-input-search">
                         <div class="col-md-6">
-                            <input class="input-signtype" type="text" required="true" placeholder="Nombre Art&iacute;stico">
+                            <input class="input-signtype" type="text" required="true" placeholder="Nombre Art&iacute;stico" name="nombre_artistico">
                         </div>
                         <div class="col-md-6">
                             <input class="input-signtype" type="text" required="true" placeholder="Nombre de Pila">
@@ -23,27 +23,33 @@
                         </div>                            
                         <div class="col-md-6">
                             <div class="be-custom-select-block">
-                                <?php nationalities(); ?>
+                                <?php nationalitiesComboBox(); ?>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="be-custom-select-block">
-                                <?php residence(); ?>
+                                <?php residenceComboBox(); ?>
                             </div>                           
                         </div>
                         
+                        <div class="col-md-6">
+                            <div class="be-custom-select-block">
+                                <?php professionComboBox(); ?>
+                            </div>                           
+                        </div>
+                        <div class="col-md-6">
+                            <span class="large-popup-text">
+                                Curr&iacute;culum
+                                <input class="input-signtype" type="file" required="" placeholder="Curr&iacute;culum">
+                            </span>
+                        </div>
                         <div class="col-md-6">
                             <span class="large-popup-text">
                                 Fecha de Nacimiento
                                 <input id="reg_birthday" class="input-signtype" type="date" required="" placeholder="Fecha de Nacimiento">
                             </span>                            
                         </div>
-                       <div class="col-md-6">
-                            <span class="large-popup-text">
-                                Curr&iacute;culum
-                                <input class="input-signtype" type="file" required="" placeholder="Curr&iacute;culum">
-                            </span>
-                        </div>
+                       
                         <div class="col-md-6">
                             <div class="be-checkbox">
                                 <label class="check-box">

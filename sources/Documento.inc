@@ -1,6 +1,3 @@
-
-
-
 <?php
 
 /*
@@ -44,12 +41,12 @@ class Documento {
     }
 
     function verificarExtension() {
-        global $extensionesPermitidasIMG;
-        if (in_array(end(explode(".", $this->nombre)), $extensionesPermitidasIMG)) {
+        global $extensionesPermitidas;
+        if (in_array(end(explode(".", $this->nombre)), $extensionesPermitidas)) {
             $this->extension = end(explode(".", strtolower($this->nombre)));
             return TRUE;
         } else {
-            exit("<center><h5 id='errorLogin'>ERROR. Tipo de archivo no v&aacute;lido, s&oacute;lo se permiten extensiones: " . implode(", ", $extensionesPermitidasIMG) . "</h5></center>");
+            exit("<center><h5 id='errorLogin'>ERROR. Tipo de archivo no v&aacute;lido, s&oacute;lo se permiten extensiones: " . implode(", ", $extensionesPermitidas) . "</h5></center>");
         }
     }
 
@@ -72,10 +69,13 @@ class Documento {
     }
 
     function copia() {
+//        echo $this->destino . "/" . $this->nombre;
         if (move_uploaded_file($this->archivo, $this->destino . "/" . $this->nombre)) {
             unset($this->archivo);
             @unlink($this->archivo);
-            return TRUE;
+//            return TRUE;
+            
+            return $this->destino . "/" . $this->nombre;
         } else {
             exit("<center><h5 id='errorLogin'>ERROR. El archivo no puede ser copiado, intenta nuevamente.</h5></center>");
         }
@@ -83,4 +83,3 @@ class Documento {
 
 }
 ?>
-		
